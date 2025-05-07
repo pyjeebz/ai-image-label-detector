@@ -8,6 +8,8 @@ def lambda_handler (event, context):
     bucket = event['Records'][0]['s3']['bucket']['name']
     image_key = event['Records'][0]['s3']['object']['key']
 
+    print (f'Processing image: s3://{bucket}/{image_key}')
+
     response = rekognition.detect_labels (
         Image = {'S3Object': {'Bucket': bucket, 'Name': image_key}},
         MaxLabels = 10,
