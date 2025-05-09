@@ -49,4 +49,7 @@ aws sns subscribe --topic-arn arn:aws:sns:us-east-1:<your-account-id>:ai-image-l
 * Check your email inbox for a label detection message.
 * Use CloudWatch to debug logs if needed.
 
+# Architecture
+![AWS Image Processing and Labelling Diagram](Architecture.png)
+* This is image shows the workflow for the detecting images.
 
